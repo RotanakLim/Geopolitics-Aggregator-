@@ -31,7 +31,7 @@ class Source:
     feed_url: str                # RSS URL or API endpoint
     bias_label: str              # e.g. "Center", "Lean Left" — from AllSides/Ad Fontes
     bias_rating_source: str      # citation for where the label came from
-    fetch_type: str = "rss"      # "rss" or "api"
+    fetch_type: str = "rss"      # "rss" or "api" rss = Really Simple Syndication
 
 
 @dataclass
@@ -57,26 +57,41 @@ class Article:
 
 SOURCES: list[Source] = [
     Source(
-        name="The Guardian",
-        country="UK",
-        feed_url="https://www.theguardian.com/world/rss",
-        bias_label="TODO: verify via AllSides",
-        bias_rating_source="https://www.allsides.com/media-bias/ratings",
+        name = "The Guardian",
+        country = "UK",
+        feed_url = "https://www.theguardian.com/world/rss",
+        bias_label = "TODO: verify via AllSides",
+        bias_rating_source = "https://www.allsides.com/media-bias/ratings",
     ),
     Source(
-        name="Al Jazeera",
-        country="Qatar",
-        feed_url="https://www.aljazeera.com/xml/rss/all.xml",
-        bias_label="TODO: verify via AllSides",
-        bias_rating_source="https://www.allsides.com/media-bias/ratings",
+        name = "Al Jazeera",
+        country = "Qatar",
+        feed_url = "https://www.aljazeera.com/xml/rss/all.xml",
+        bias_label = "TODO: verify via AllSides",
+        bias_rating_source = "https://www.allsides.com/media-bias/ratings",
     ),
     Source(
-        name="Deutsche Welle (DW)",
-        country="Germany",
-        feed_url="https://rss.dw.com/rdf/rss-en-world",
-        bias_label="TODO: verify via AllSides",
-        bias_rating_source="https://www.allsides.com/media-bias/ratings",
+        name = "Deutsche Welle (DW)",
+        country = "Germany",
+        feed_url = "https://rss.dw.com/rdf/rss-en-world",
+        bias_label = "TODO: verify via AllSides",
+        bias_rating_source = "https://www.allsides.com/media-bias/ratings",
     ),
+    Source(
+        name = "Cable News Network (CNN)",
+        country = "USA",
+        feed_url = "https://rss.app/r/feed/5KS3LEsH41ez1jdV",
+        bias_label = "Far Left",
+        bias_rating_source = "https://www.allsides.com/news-source/cnn-opinion-media-bias",
+    ),
+    Source(
+        name = "British Broadcasting Corporation (BBC)",
+        country  = "England",
+        feed_url = "", # comeback to this
+        bias_label = "Center"
+        bias_rating_source = "https://www.allsides.com/news-source/bbc-news-media-bias"
+    )
+
     # TODO: add AFP (via a licensed aggregator/API — AFP does not run a
     # simple public RSS feed the way Guardian/DW do), Reuters, NHK World, etc.
 ]
