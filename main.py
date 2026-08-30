@@ -85,6 +85,13 @@ SOURCES: list[Source] = [
         bias_rating_source = "https://www.allsides.com/news-source/cnn-opinion-media-bias",
     ),
     Source(
+        name = "Fox News",
+        country = "USA",
+        feed_url = "", #comeback to this
+        bias_label = "Far Right",
+        bias_rating_source = "https://www.allsides.com/news-source/fox-news-media-bias",
+    ),
+    Source(
         name = "British Broadcasting Corporation (BBC)",
         country  = "England",
         feed_url = "", # comeback to this
