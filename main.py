@@ -1,8 +1,4 @@
 """
-Geopolitics News Aggregator — Starter Skeleton
-------------------------------------------------
-This is scaffolding, not a finished app. Fill in the TODOs.
-
 Design:
   - Source: a news outlet (RSS or API), with a bias rating you supply
     from a transparent third-party source (AllSides, Ad Fontes Media).
