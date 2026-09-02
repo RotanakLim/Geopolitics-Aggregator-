@@ -56,7 +56,7 @@ SOURCES: list[Source] = [
         name = "The Guardian",
         country = "UK",
         feed_url = "https://www.theguardian.com/world/rss",
-        bias_label = "Far Left",
+        bias_label = "Left",  # AllSides: Left (low/initial confidence, Aug 2026)
         bias_rating_source = "https://www.allsides.com/news-source/guardian-media-bias",
     ),
     Source(
@@ -77,23 +77,24 @@ SOURCES: list[Source] = [
         name = "Cable News Network (CNN)",
         country = "USA",
         feed_url = "https://rss.app/r/feed/5KS3LEsH41ez1jdV",
-        bias_label = "Far Left",
-        bias_rating_source = "https://www.allsides.com/news-source/cnn-opinion-media-bias",
+        bias_label = "Lean Left",  # AllSides rates CNN's online news Lean Left
+        bias_rating_source = "https://www.allsides.com/news-source/cnn-media-bias",
     ),
     Source(
         name = "Fox News",
         country = "USA",
-        feed_url = "", #comeback to this
-        bias_label = "Far Right",
+        feed_url = "",  # TODO: find Fox News RSS/feed URL
+        bias_label = "Right",
         bias_rating_source = "https://www.allsides.com/news-source/fox-news-media-bias",
     ),
     Source(
         name = "British Broadcasting Corporation (BBC)",
-        country  = "England",
-        feed_url = "", # comeback to this
-        bias_label = "Center"
-        bias_rating_source = "https://www.allsides.com/news-source/bbc-news-media-bias"
-    )
+        country = "England",
+        feed_url = "",  # TODO: find BBC RSS/feed URL
+        bias_label = "Center",  # TODO: confirm on AllSides' BBC page directly
+        bias_rating_source = "https://www.allsides.com/news-source/bbc-news-media-bias",
+    ),
+]
 
     # TODO: add AFP (via a licensed aggregator/API — AFP does not run a
     # simple public RSS feed the way Guardian/DW do), Reuters, NHK World, etc.
