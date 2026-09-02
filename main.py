@@ -45,11 +45,6 @@ class Article:
 # ---------------------------------------------------------------------------
 # 2. Source registry
 # ---------------------------------------------------------------------------
-# TODO: Fill in real feed URLs and confirm bias labels against AllSides
-# (https://www.allsides.com/media-bias/ratings) or Ad Fontes Media
-# (https://adfontesmedia.com/) before shipping. Don't hardcode a label
-# without a citation — that's exactly the kind of unsourced bias claim
-# this project is trying to avoid.
 
 SOURCES: list[Source] = [
     Source(
@@ -77,23 +72,26 @@ SOURCES: list[Source] = [
         name = "Cable News Network (CNN)",
         country = "USA",
         feed_url = "https://rss.app/r/feed/5KS3LEsH41ez1jdV",
-        bias_label = "Lean Left",  # AllSides rates CNN's online news Lean Left
+        bias_label = "Lean Left", 
         bias_rating_source = "https://www.allsides.com/news-source/cnn-media-bias",
     ),
     Source(
         name = "Fox News",
         country = "USA",
-        feed_url = "",  # TODO: find Fox News RSS/feed URL
+        feed_url = "https://moxie.foxnews.com/google-publisher/world.xml", 
         bias_label = "Right",
         bias_rating_source = "https://www.allsides.com/news-source/fox-news-media-bias",
     ),
     Source(
         name = "British Broadcasting Corporation (BBC)",
         country = "England",
-        feed_url = "",  # TODO: find BBC RSS/feed URL
-        bias_label = "Center",  # TODO: confirm on AllSides' BBC page directly
+        feed_url = "https://feeds.bbci.co.uk/news/world/rss.xml", 
+        bias_label = "Center", 
         bias_rating_source = "https://www.allsides.com/news-source/bbc-news-media-bias",
     ),
+    Source(
+        name = "",
+    )
 ]
 
     # TODO: add AFP (via a licensed aggregator/API — AFP does not run a
