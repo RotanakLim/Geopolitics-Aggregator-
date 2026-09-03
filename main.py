@@ -88,15 +88,9 @@ SOURCES: list[Source] = [
         feed_url = "https://feeds.bbci.co.uk/news/world/rss.xml", 
         bias_label = "Center", 
         bias_rating_source = "https://www.allsides.com/news-source/bbc-news-media-bias",
-    ),
-    Source(
-        name = "",
     )
 ]
 
-    # TODO: add AFP (via a licensed aggregator/API — AFP does not run a
-    # simple public RSS feed the way Guardian/DW do), Reuters, NHK World, etc.
-]
 
 
 # ---------------------------------------------------------------------------
